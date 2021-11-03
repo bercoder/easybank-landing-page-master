@@ -26,6 +26,9 @@ body{
 
 .container{
     min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
 }
 
 a { text-decoration: none}
@@ -154,10 +157,11 @@ header .invite{
     width: 100%;
     position: absolute;
     right: 0;
+    top: -100px;
     background-image: url('../images/image-mockups.png');
     background-repeat: no-repeat;
     height: 100%;
-    background-position: center -200px;
+    background-position: center top;
     background-size: 500px;
     z-index: 30
 }
@@ -299,8 +303,8 @@ footer .copyright{
         background-image: url('../images/image-mockups.png');
         background-repeat: no-repeat;
         height: 100%;
-        top: -100px;
-        background-position: 80px 40%;
+        top: 0;
+        background-position: 80px top;
         background-size: 100%;
         z-index: 30
     }
@@ -453,7 +457,7 @@ footer .copyright{
 
     .image {
         top: -200px;
-        background-position: 80px 40%;
+        background-position: 80px top;
     }
     .why-choose {
         padding: 80px;
