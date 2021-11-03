@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(220, 14%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+.container{
+    min-width: 375px;
+}
+
+a { text-decoration: none}
+
+h2 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 3.4rem;
+    color: var(--Dark-Blue);
+    margin: 30px auto
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--Dark-Blue);
+    margin: 10px auto    
+}
+
+p{
+    font-size: 1.6rem;
+    color: var(--Dark-Blue);
+    font-weight: 300;
+}
+
+button.invite{
+    width: 200px;
+    background: linear-gradient(to left, var(--Lime-Green), var(--Bright-Cyan));
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: opacity .4s ease-in;
+}
+
+button.invite:hover{
+    opacity: .5;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+}
+
+label.hamburger{
+    background: url('../images/icon-hamburger.svg') no-repeat center;
+    border: 0;
+    width: 34px;
+    height: 34px;
+}
+
+input#hamburger{ display: none;}
+
+input#hamburger:checked + label {
+    background: url('../images/icon-close.svg') no-repeat center;
+}
+
+input#hamburger:checked ~ nav {
+    display: block;
+}
+header {
+    background-color: white;
+    position: relative;
+    z-index: 90
+}
+
+header nav{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 60px;
+    display: none;
+    z-index: 1;
+    background: linear-gradient(black, rgba(243, 244, 246, .3))
+}
+
+header nav ul{
+    list-style-type: none;
+    background-color: var(--White);
+    width: 90%;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px auto 0;
+}
+
+header ul li{
+    text-align: center;
+    margin-top: 20px;
+}
+
+header nav a{
+    color: black;
+    font-size: 1.8rem;
+    
+}
+
+header .invite{ 
+    display: none;
+}
+
+.hero{
+    background-color: var(--Very-Light-Gray);
+    overflow: hidden;    
+    padding-top: 50px;
+}
+
+.hero .images{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url('../images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.image {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    background-image: url('../images/image-mockups.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center -200px;
+    background-size: 500px;
+    z-index: 30
+}
+
+.hero .images img{
+    height: 100%;
+    margin-top: -170px;
+    object-fit: cover;
+}
+
+.hero .text{
+    padding: 50px 30px 30px;
+    text-align: center;
+    /* margin-top: -220px; */
+}
+
+.hero .invite{
+    margin-top: 30px;
+}
+
+
+.why-choose{
+    background-color: var(--Light-Grayish-Blue);
+    padding: 30px
+}
+
+.why-choose div{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.blog{
+    background-color: var(--Very-Light-Gray);
+    padding: 30px 30px 50px;
+}
+
+.blog article{
+    margin: 25px auto;
+    background-color: var(--White);
+    padding-bottom: 40px;
+}
+
+.blog img{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.blog a:hover h3{
+    color: var(--Lime-Green)
+} 
+
+.blog h3{
+    padding: 0 20px;
+}
+
+.blog p{
+    padding: 0 20px;
+}
+
+p.author{
+    font-size: 1.2rem;
+    color: var(--Grayish-Blue)
+}
+
+footer{
+    background-color: var(--Dark-Blue);
+    padding: 30px;
+    text-align: center;
+}
+
+footer img{
+    margin: 20px 0;
+}
+
+footer .social{
+    display: flex;
+    justify-content: center;
+}
+
+footer .social a{
+    margin: 0 10px
+}
+
+footer svg:hover path{
+    transition: 5ms ease-in;
+}
+
+footer svg:hover path{
+    fill: var(--Lime-Green);
+}
+
+footer nav {
+    margin: 20px 0
+}
+
+footer nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+footer nav li{
+    margin: 12px 0;
+}
+
+footer nav a{
+    font-size: 1.6rem;
+    color: white;
+    transition: 3ms ease-in
+}
+
+footer nav a:hover{
+    color: var(--Lime-Green)
+}
+
+footer button{
+    margin: 15px 0
+}
+
+footer .copyright{
+    color: var(--Grayish-Blue);
+    font-size: 1.6rem;
+    margin: 20px
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 10px;
+    height: 30px;    
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 769px) {
+    .image {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        background-image: url('../images/image-mockups.png');
+        background-repeat: no-repeat;
+        height: 100%;
+        top: -100px;
+        background-position: 80px 40%;
+        background-size: 100%;
+        z-index: 30
+    }
+
+    h2, h3, p, .why-choose div{
+        text-align: left;
+    }
+
+    header, section, footer{
+        padding-inline: 40px;
+    }
+
+    header input, header label{
+        display: none;
+    }
+
+    header nav{
+        display: flex;
+        position: relative;
+        align-items: center;
+        background: none;
+        top: 0
+    }
+    header nav .invite{
+        display: block;
+    }
+
+    header nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 0;
+        margin: 0;
+        padding: 0
+    }
+
+    header nav li{
+        margin: 0
+    }
+
+    nav li a {
+        position: relative;
+    }
+
+    nav li a::after {
+        content: '';
+        position: absolute;
+        background-color: var(--Lime-Green);
+        height: 3px;
+        width: 100%;
+        bottom: -20px;
+        left: 0;
+        display: none;
+    }
+    nav li a:hover{
+        font-weight: bold;
+    }
+
+    nav li a:hover::after{
+        display: block;
+    }
+
+    .hero .images{
+        background-image: url('../images/bg-intro-desktop.svg');
+    }
+
+    .hero{
+        display: flex;
+    }
+
+    .hero .text{
+        margin: 40px 0;
+        text-align: left;
+        padding: 0;
+    }
+
+    .hero .images{
+        order: 2
+    }    
+
+    .why-choose{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 40px;
+    }
+
+    .why-choose h2,
+    .why-choose > p{
+        width: 100%;
+    }
+
+    .why-choose div{
+        width: calc(50% - 15px);
+        margin-left: 2px
+    }
+
+    .why-choose div:nth-child(1){
+        margin-left: 0
+    }
+
+    .why-choose h3 {
+        margin: 30px 0
+    }
+    .blog{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 40px 50px
+    }
+
+    .blog h2{
+        width: 100%;
+    }
+
+    .blog article{
+        width: calc(50% - 15px);
+        margin-left: 2px
+    }
+
+    .blog article:nth-child(1){
+        margin-left: 0
+    }
+
+    .blog article img{
+        height: 250px;
+    }
+
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer > div, footer nav{
+        width: calc(100% / 3)
+    }
+
+    footer nav{
+        text-align: center;
+    }
+
+    footer .right{
+        text-align: right;
+    }    
+}
+
+@media (min-width: 1024px) {
+
+    header, section, footer{
+        padding-inline: 80px;
+    }
+
+    .image {
+        top: -200px;
+        background-position: 80px 40%;
+    }
+    .why-choose {
+        padding: 80px;
+    }
+
+    .why-choose div{
+        width: calc(25% - 15px);
+        margin-left: 2px
+    }
+
+    .blog{
+        padding: 30px 80px 50px
+    }
+
+    .blog article{
+        width: calc(25% - 15px);
+        margin-left: 2px
+    }
+
+    .blog article:nth-child(1){
+        margin-left: 0
+    }
+
+    .blog article img{
+        height: 125px;
+    }
+
+    footer .left{
+        max-width: 220px;
+    }
+    footer .right{
+        max-width: 280px;
+    }
+
+    footer .left, footer nav ul:nth-child(1){
+        margin-right: 80px;
+    }
+
+    footer nav{
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-start; 
+    }
+
+    footer nav ul{
+        text-align: left;
+    }
+}
